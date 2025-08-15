@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# set $BUILDDIR if not done already
+if [[ -z $BUILDDIR ]]; then
+    BUILDDIR=../../$1
+fi
+
+MACHINE="radium-machine"
+SDKMACHINE="x86_64"
+DISTRO="radium-eglfs"
+
+CWD=`pwd`
+CUSTOM_LAYER="meta-radium"
+LAYERSDIR=$CWD/radium-layers
+
+TARGET=radium-image
+
+OEROOT=${LAYERSDIR}/poky
+if [ -e ${LAYERSDIR}/openembedded-core ]; then
+    OEROOT=${LAYERSDIR}/openembedded-core
+fi
+
+cd $OEROOT
+. ./oe-init-build-env $BUILDDIR > /dev/null
+
+# Use custom local.conf
+cp $LAYERSDIR/$CUSTOM_LAYER/conf/local.conf conf/local.conf.sample
+grep -v '^#\|^$' conf/local.conf.sample > conf/local.conf
+
+# Use custom bblayers.conf
+cp $LAYERSDIR/$CUSTOM_LAYER/conf/bblayers.conf conf/
+
+# Use custom layer.conf
+cp $LAYERSDIR/$CUSTOM_LAYER/conf/layer.conf conf/
+
+cat <<EOF
+
+Welcome to RADIUM BSP
+
+The Yocto Project has extensive documentation about OE including a
+reference manual which can be found at:
+    http://yoctoproject.org/documentation
+
+For more information about OpenEmbedded see their website:
+    http://www.openembedded.org/
+
+You can now run 'bitbake <target>'
+
+Common targets are:
+    ${TARGET}
+EOF
+
+cat <<EOF
+
+Your build environment has been configured with:
+
+    MACHINE=$MACHINE
+    SDKMACHINE=$SDKMACHINE
+    DISTRO=$DISTRO
+
+EOF
