@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <manifest>
+  <default sync-j="8" revision="kirkstone"/>
+  <remote fetch="https://git.openembedded.org/" name="oe"/>
+  <remote fetch="https://github.com/STMicroelectronics" name="st"/>
+  <remote fetch="https://github.com/meta-qt5" name="qt"/>
+
+  <project name="bitbake" remote="oe" revision="ac576d6fad6bba0cfea931883f25264ea83747ca" path="openembedded-core/bitbake"/>
+  <project name="openembedded-core" remote="oe" revision="f7766da462905ec67bf549d46b8017be36cd5b2a" path="openembedded-core"/>
+  <project name="meta-openembedded" remote="oe" revision="05dcac98473402d87e0af73bbc2c5a6a840abe93" path="meta-openembedded"/>
+  <project name="meta-qt5" remote="qt" revision="5b71df60e523423b9df6793de9387f87a149ac42" path="meta-qt5"/>
+  <project name="meta-st-stm32mp" remote="st" revision="ca501bd7dbe023682903ceedddaacd940b0898f4" path="meta-st/meta-st-stm32mp"/>
+  <project name="meta-st-openstlinux" remote="st" revision="cb736b403d0fef2a02390695613b6b4bb13ca1b7" path="meta-st/meta-st-openstlinux"/>
+  </manifest>
