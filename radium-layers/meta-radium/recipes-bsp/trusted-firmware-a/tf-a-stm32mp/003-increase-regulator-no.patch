@@ -1,0 +1,26 @@
+From 8359c5ab0fd3aaccdcbd582aca0140094629005d Mon Sep 17 00:00:00 2001
+From: radium88 <ahamod3.1416@gmail.com>
+Date: Mon, 18 Aug 2025 00:42:57 +0200
+Subject: [PATCH] increase relgulator no
+
+Signed-off-by: radium88 <ahamod3.1416@gmail.com>
+---
+ plat/st/stm32mp1/stm32mp1_def.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/plat/st/stm32mp1/stm32mp1_def.h b/plat/st/stm32mp1/stm32mp1_def.h
+index ba92bd321..4cf614fe1 100644
+--- a/plat/st/stm32mp1/stm32mp1_def.h
++++ b/plat/st/stm32mp1/stm32mp1_def.h
+@@ -637,7 +637,7 @@ static inline uintptr_t tamp_bkpr(uint32_t idx)
+ /* 3 PWR + 1 VREFBUF + 14 PMIC regulators + 1 FIXED */
+ #define PLAT_NB_RDEVS			U(19)
+ /* 2 FIXED */
+-#define PLAT_NB_FIXED_REGUS		U(2)
++#define PLAT_NB_FIXED_REGUS		U(6)
+ /* No GPIO regu */
+ #define PLAT_NB_GPIO_REGUS		U(0)
+ /* Number of low power modes defined in the device tree */
+-- 
+2.34.1
+
