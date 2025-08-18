@@ -1,0 +1,28 @@
+From 8e617f244511ad008817c8659420896b09fe4991 Mon Sep 17 00:00:00 2001
+From: radium88 <ahamod3.1416@gmail.com>
+Date: Mon, 18 Aug 2025 01:11:55 +0200
+Subject: [PATCH] resolve u-boot stop error
+
+Signed-off-by: radium88 <ahamod3.1416@gmail.com>
+---
+ board/st/stm32mp1/stm32mp1.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/board/st/stm32mp1/stm32mp1.c b/board/st/stm32mp1/stm32mp1.c
+index 05f41737e6d..d0120160d5b 100644
+--- a/board/st/stm32mp1/stm32mp1.c
++++ b/board/st/stm32mp1/stm32mp1.c
+@@ -931,8 +931,8 @@ int board_late_init(void)
+ 		uclass_foreach_dev_probe(UCLASS_ADC, dev) {
+ 			log_debug("ACD probe for calibration: %s\n", dev->name);
+ 		}
+-		/* for DK1/DK2 boards */
+-		board_check_usb_power();
++		/* for DK1/DK2 boards 
++		board_check_usb_power(); */
+ 	}
+ 
+ 	return 0;
+-- 
+2.34.1
+
