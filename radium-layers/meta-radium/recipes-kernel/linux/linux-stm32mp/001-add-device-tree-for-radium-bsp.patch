@@ -32,8 +32,6 @@ index 000000000..8fbed34db
 @@ -0,0 +1,776 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR BSD-3-Clause)
 +/*
-+ * Copyright (C) emtrion GmbH 2021 - All Rights Reserved
-+ * Author: Jan von Wiarda <jan.vonwiarda@emtrion.de>.
 + */
 +
 +#include "stm32mp157.dtsi"
@@ -48,8 +46,8 @@ index 000000000..8fbed34db
 +#include <dt-bindings/rtc/rtc-stm32.h>
 +
 +/ {
-+	model = "emtrion emSTAMP-Argon";
-+	compatible = "emtrion,stm32mp157c-emstamp-argon", "st,stm32mp157";
++	model = "Radium";
++	compatible = "stm32mp157c-emstamp-argon", "st,stm32mp157";
 +
 +	aliases {
 +		ethernet0 = &ethernet0;

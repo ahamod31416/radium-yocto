@@ -21,7 +21,6 @@ index 00000000000..3ee3f6521c9
 @@ -0,0 +1,808 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR BSD-3-Clause)
 +/*
-+ * Copyright (C) emtrion GmbH 2021 - All Rights Reserved
 + */
 +
 +/dts-v1/;
@@ -835,7 +834,6 @@ index 00000000000..0fbb39533ec
 @@ -0,0 +1,142 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR BSD-3-Clause)
 +/*
-+ * Copyright (C) emtrion GmbH 2021 - All Rights Reserved
 + */
 +
 +#include <dt-bindings/clock/stm32mp1-clksrc.h>
@@ -983,7 +981,6 @@ index 00000000000..869ed4e6226
 @@ -0,0 +1,32 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR BSD-3-Clause)
 +/*
-+ * Copyright (C) emtrion GmbH 2021 - All Rights Reserved
 + */
 +
 +/dts-v1/;
